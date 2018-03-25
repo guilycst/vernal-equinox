@@ -1,4 +1,4 @@
-package br.veq.beans;
+package br.veq.beans.core;
 
 public class Processor {
 

@@ -1,4 +1,4 @@
-package br.veq.beans;
+package br.veq.beans.core;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
