@@ -1,4 +1,4 @@
-package br.veq.beans.core;
+package br.veq.xml.beans.core;
 
 public class ChildProcessor  extends Processor{
 

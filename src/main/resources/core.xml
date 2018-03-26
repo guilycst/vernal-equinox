@@ -2,11 +2,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	<bean id="datasource" class="br.veq.beans.core.FileDatasource" lazy-init="true">
+	<bean id="datasource" class="br.veq.xml.beans.core.FileDatasource" lazy-init="true">
 		<property name="file" value="/arquivos/people.csv" />
 	</bean>
-	<bean id="printer" class="br.veq.beans.core.PrinterImpl" scope="prototype"/>
-	<bean id="processor" class="br.veq.beans.core.Processor" scope="prototype">
+	<bean id="printer" class="br.veq.xml.beans.core.PrinterImpl" scope="prototype"/>
+	<bean id="processor" class="br.veq.xml.beans.core.Processor" scope="prototype">
 		<!-- constructor injection -->
 		<constructor-arg ref="datasource" index="0"/>
 		<constructor-arg ref="printer" index="1"/>
@@ -14,10 +14,10 @@
 		<property name="printer" ref="printer" />
 		<!-- <property name="datasource" ref="datasource" /> -->
 	</bean>
-	<bean id="lazyBean" class="br.veq.beans.core.LazyBean" lazy-init="true"/>
-	<bean id="initMethod" class="br.veq.beans.core.InitMethod" lazy-init="true" init-method="init"/>
-	<bean id="randomDatasource" class="br.veq.beans.core.RandomDatasource"/>
-	<bean id="childProcessor" parent="processor" class="br.veq.beans.core.ChildProcessor">
+	<bean id="lazyBean" class="br.veq.xml.beans.core.LazyBean" lazy-init="true"/>
+	<bean id="initMethod" class="br.veq.xml.beans.core.InitMethod" lazy-init="true" init-method="init"/>
+	<bean id="randomDatasource" class="br.veq.xml.beans.core.RandomDatasource"/>
+	<bean id="childProcessor" parent="processor" class="br.veq.xml.beans.core.ChildProcessor">
 		<property name="datasource" ref="randomDatasource"/>
 	</bean>
 </beans>

@@ -1,4 +1,4 @@
-package br.veq.beans.core;
+package br.veq.xml.beans.core;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -12,9 +12,9 @@ import java.util.Map;
 import org.junit.Test;
 import org.springframework.beans.BeansException;
 
-import br.veq.beans.SpringTests;
+import br.veq.xml.XMLContainerConfigTests;
 
-public class CoreFeaturesTests extends SpringTests {
+public class CoreFeaturesTests extends XMLContainerConfigTests {
 
 	@Test
 	public void testFetchProcessorBeanByName() {

@@ -1,10 +1,10 @@
-package br.veq.beans;
+package br.veq.xml;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public abstract class SpringTests {
+public abstract class XMLContainerConfigTests {
 
 	protected static ClassPathXmlApplicationContext context;
 

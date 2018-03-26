@@ -1,4 +1,4 @@
-package br.veq.beans.spel;
+package br.veq.xml.beans.spel;
 
 public class SpELLogicalOperators {
 	private boolean greaterThan;

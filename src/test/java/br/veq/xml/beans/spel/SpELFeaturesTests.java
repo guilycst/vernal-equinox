@@ -1,20 +1,20 @@
-package br.veq.beans.spel;
+package br.veq.xml.beans.spel;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.Test;
 
-import br.veq.beans.SpringTests;
+import br.veq.xml.XMLContainerConfigTests;
 
-public class SpELFeaturesTests extends SpringTests {
+public class SpELFeaturesTests extends XMLContainerConfigTests {
 
 	@Test
 	public void testBasicSintax() {
 		SpELBasicSintax bean = context.getBean(SpELBasicSintax.class);
 		assertEquals(5, bean.getIntNumber());
-		assertEquals(5.5, bean.getFloatNumber());
+		assertEquals(5.5, bean.getFloatNumber(), Double.NaN);
 		assertEquals("Hello", bean.getaString());
 		assertTrue(bean.isaBoolean());
 	}
