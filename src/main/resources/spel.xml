@@ -2,10 +2,42 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	<bean id="operators" class="br.veq.beans.spel.SpELBasicSintax">
+	<bean id="basicSintax" class="br.veq.beans.spel.SpELBasicSintax">
 		<property name="intNumber" value="#{5}" />
 		<property name="floatNumber" value="#{5.5}" />
 		<property name="aString" value="#{'Hello'}" />
 		<property name="aBoolean" value="#{true}" />
+	</bean>
+
+	<bean id="mathOperators"
+		class="br.veq.beans.spel.SpELMathOperators">
+		<property name="sum" value="#{5 + 5}" />
+		<property name="subs" value="#{5 - 4}" />
+		<property name="mult" value="#{5 * 5}" />
+		<property name="div" value="#{5 / 5}" />
+		<property name="mod" value="#{3 % 2}" />
+		<property name="pow" value="#{3 ^ 2}" />
+	</bean>
+
+	<bean id="logicalOperators"
+		class="br.veq.beans.spel.SpELLogicalOperators">
+		<property name="greaterThan" value="#{6 gt 5}" />
+		<property name="equality" value="#{5 eq 5}" />
+		<property name="lesserThan" value="#{4 lt 5}" />
+		<property name="not" value="#{not false}" />
+		<property name="notEqual" value="#{3 ne 2}" />
+		<property name="greaterOrEqThan"
+			value="#{(3 ge 2) and (3 ge 3)}" />
+		<property name="lesserOrEqThan"
+			value="#{(2 le 3) and (3 le 3)}" />
+		<property name="ternary"
+			value="#{1 eq 1 ? 'one is equals to one' : 'one is not equals to one'}" />
+	</bean>
+
+	<bean id="references" class="br.veq.beans.spel.SpELReferences" scope="prototype">
+		<property name="logicalOperatorsRef" value="#{logicalOperators}"/>
+		<property name="referencedValue" value="#{mathOperators.sum}"/>
+		<property name="referencedMethodCallValue" value="#{mathOperators?.getSum()}"/>
+		<property name="sysProp" value="#{systemProperties['xpto.foo']}"/>
 	</bean>
 </beans>
