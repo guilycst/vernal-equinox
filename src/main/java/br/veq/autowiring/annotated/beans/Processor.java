@@ -1,9 +1,19 @@
 package br.veq.autowiring.annotated.beans;
 
+import javax.annotation.Resource;
+import javax.inject.Inject;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("processor")
 public class Processor {
 
+	@Resource
 	private ProductDAO productDAO;
+	@Autowired
 	private SaleDAO saleDAO;
+	@Inject
 	private UserDAO userDAO;
 
 	public ProductDAO getProductDAO() {

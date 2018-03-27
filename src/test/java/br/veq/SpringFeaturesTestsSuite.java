@@ -4,6 +4,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
+import br.veq.autowiring.annotated.AutowiringAnnotatedTests;
 import br.veq.autowiring.xml.AutowiringXMLTests;
 import br.veq.xml.beans.core.CoreFeaturesTests;
 import br.veq.xml.beans.spel.SpELFeaturesTests;
@@ -12,6 +13,7 @@ import br.veq.xml.beans.spel.SpELFeaturesTests;
 @SuiteClasses({ // ^_^
 		CoreFeaturesTests.class, //
 		SpELFeaturesTests.class, //
+		AutowiringAnnotatedTests.class, //
 		AutowiringXMLTests.class //
 		// ^_^
 })
