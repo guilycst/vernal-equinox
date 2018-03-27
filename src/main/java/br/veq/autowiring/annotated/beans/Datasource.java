@@ -1,4 +1,4 @@
-package br.veq.autowiring.beans;
+package br.veq.autowiring.annotated.beans;
 
 public class Datasource {
 

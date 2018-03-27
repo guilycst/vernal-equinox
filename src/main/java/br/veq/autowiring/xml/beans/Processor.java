@@ -1,4 +1,4 @@
-package br.veq.autowiring.beans;
+package br.veq.autowiring.xml.beans;
 
 public class Processor {
 

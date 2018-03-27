@@ -1,13 +1,13 @@
-package br.veq.autowiring;
+package br.veq.autowiring.xml;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
-import br.veq.autowiring.beans.Processor;
+import br.veq.autowiring.xml.beans.Processor;
 
-public class AutowiringTests extends AutowiringContainerConfigTests {
+public class AutowiringXMLTests extends AutowiringXMLContainerConfigTests {
 
 	@Test
 	public void testBasicAutowiring() {
