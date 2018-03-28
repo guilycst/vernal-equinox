@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import br.veq.autowiring.xml.beans.Processor;
 
-public class AutowiringXMLTests extends AutowiringXMLContainerConfigTests {
+public class AutowiringXMLTests extends AutowiringXMLContainerTestsConfig {
 
 	@Test
 	public void testBasicAutowiring() {

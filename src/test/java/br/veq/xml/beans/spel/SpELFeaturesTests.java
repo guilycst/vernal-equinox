@@ -6,9 +6,9 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import br.veq.xml.XMLContainerConfigTests;
+import br.veq.xml.beans.StaticXMLContainerTestsConfig;
 
-public class SpELFeaturesTests extends XMLContainerConfigTests {
+public class SpELFeaturesTests extends StaticXMLContainerTestsConfig {
 
 	@Test
 	public void testBasicSintax() {

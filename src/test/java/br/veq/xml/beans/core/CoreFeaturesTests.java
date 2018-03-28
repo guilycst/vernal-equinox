@@ -12,9 +12,9 @@ import java.util.Map;
 import org.junit.Test;
 import org.springframework.beans.BeansException;
 
-import br.veq.xml.XMLContainerConfigTests;
+import br.veq.xml.beans.StaticXMLContainerTestsConfig;
 
-public class CoreFeaturesTests extends XMLContainerConfigTests {
+public class CoreFeaturesTests extends StaticXMLContainerTestsConfig {
 
 	@Test
 	public void testFetchProcessorBeanByName() {
