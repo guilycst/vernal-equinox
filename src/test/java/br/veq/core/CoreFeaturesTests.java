@@ -1,4 +1,4 @@
-package br.veq.xml.beans.core;
+package br.veq.core;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -12,7 +12,13 @@ import java.util.Map;
 import org.junit.Test;
 import org.springframework.beans.BeansException;
 
-import br.veq.xml.beans.StaticXMLContainerTestsConfig;
+import br.veq.xml.beans.core.ChildProcessor;
+import br.veq.xml.beans.core.Datasource;
+import br.veq.xml.beans.core.FileDatasource;
+import br.veq.xml.beans.core.InitMethod;
+import br.veq.xml.beans.core.LazyBean;
+import br.veq.xml.beans.core.Processor;
+import br.veq.xml.beans.core.RandomDatasource;
 
 public class CoreFeaturesTests extends StaticXMLContainerTestsConfig {
 

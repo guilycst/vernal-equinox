@@ -1,7 +1,6 @@
 package br.veq;
 
 import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.springframework.context.support.AbstractApplicationContext;
 
 public abstract class TestsConfig {
@@ -9,12 +8,11 @@ public abstract class TestsConfig {
 	protected static AbstractApplicationContext context;
 
 	public TestsConfig(String... configLocations) {
-		context = AppContextFactory.getAppContext(configLocations);
+		context = AppContextFactory.getXMLAppContext(configLocations);
 	}
 
-	@BeforeClass
-	public static void before() {
-
+	public TestsConfig(Class<?>... configLocations) {
+		context = AppContextFactory.getAnnotationAppContext(configLocations);
 	}
 
 	@AfterClass

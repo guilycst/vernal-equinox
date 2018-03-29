@@ -1,4 +1,4 @@
-package br.veq.xml.beans.spel;
+package br.veq.core;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -6,7 +6,10 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import br.veq.xml.beans.StaticXMLContainerTestsConfig;
+import br.veq.xml.beans.spel.SpELBasicSintax;
+import br.veq.xml.beans.spel.SpELLogicalOperators;
+import br.veq.xml.beans.spel.SpELMathOperators;
+import br.veq.xml.beans.spel.SpELReferences;
 
 public class SpELFeaturesTests extends StaticXMLContainerTestsConfig {
 

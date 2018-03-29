@@ -1,4 +1,4 @@
-package br.veq.xml.beans;
+package br.veq.core;
 
 import br.veq.TestsConfig;
 

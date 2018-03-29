@@ -1,4 +1,4 @@
-package br.veq.autowiring.xml;
+package br.veq.autowiring;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

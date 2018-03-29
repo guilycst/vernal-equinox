@@ -1,4 +1,4 @@
-package br.veq.autowiring.xml;
+package br.veq.autowiring;
 
 import br.veq.TestsConfig;
 
