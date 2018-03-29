@@ -5,7 +5,7 @@ import org.springframework.context.support.AbstractApplicationContext;
 
 public abstract class TestsConfig {
 
-	protected static AbstractApplicationContext context;
+	protected AbstractApplicationContext context;
 
 	public TestsConfig(String... configLocations) {
 		context = AppContextFactory.getXMLAppContext(configLocations);
