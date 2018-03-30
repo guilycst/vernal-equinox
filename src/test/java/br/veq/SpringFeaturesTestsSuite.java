@@ -5,6 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 import br.veq.annotated.NoXMLAnnotatedTests;
+import br.veq.aop.AOPTests;
 import br.veq.autowiring.AutowiringAnnotatedTests;
 import br.veq.autowiring.AutowiringXMLTests;
 import br.veq.core.CoreFeaturesTests;
@@ -16,7 +17,8 @@ import br.veq.core.SpELFeaturesTests;
 		SpELFeaturesTests.class, //
 		AutowiringAnnotatedTests.class, //
 		AutowiringXMLTests.class, //
-		NoXMLAnnotatedTests.class //
+		NoXMLAnnotatedTests.class, //
+		AOPTests.class
 		// ^_^
 })
 public class SpringFeaturesTestsSuite {
