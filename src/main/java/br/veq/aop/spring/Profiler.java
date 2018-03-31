@@ -1,10 +1,7 @@
 package br.veq.aop.spring;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
@@ -12,7 +9,6 @@ import org.aopalliance.intercept.MethodInvocation;
 public class Profiler extends CallRec implements MethodInterceptor {
 
 	private List<Long> times = new ArrayList<>();
-	private static Map<String, String> calls = new HashMap<>();
 
 	@Override
 	public Object invoke(MethodInvocation invocation) throws Throwable {
@@ -29,10 +25,6 @@ public class Profiler extends CallRec implements MethodInterceptor {
 
 		getTimes().add(time);
 		return result;
-	}
-
-	public String get(String id) {
-		return calls.get(id);
 	}
 
 	public List<Long> getTimes() {

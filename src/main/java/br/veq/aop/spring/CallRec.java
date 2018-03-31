@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class CallRec {
 
-	private static Map<String, String> calls = new HashMap<>();
+	private Map<String, String> calls = new HashMap<>();
 
 	protected String getMethodSignature(Method method, Object[] args, Object target) {
 		return Arrays.stream(args).map(m -> m.getClass().getSimpleName())
@@ -23,7 +23,7 @@ public class CallRec {
 		System.out.println(msg);
 	}
 
-	public static String get(Class<?> clazz, String uid) {
+	public String get(Class<?> clazz, String uid) {
 		return calls.get(clazz.getSimpleName().concat(".").concat(uid));
 	}
 
