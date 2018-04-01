@@ -1,7 +1,5 @@
 package br.veq.xml.beans.spel;
 
-import java.util.Properties;
-
 public class SpELReferences {
 
 	private SpELLogicalOperators logicalOperatorsRef;

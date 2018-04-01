@@ -21,7 +21,7 @@ public class Profiler extends CallRec implements MethodInterceptor {
 		String methodSignature = getMethodSignature(invocation.getMethod(), invocation.getArguments(),
 				invocation.getThis());
 		System.out.printf("%s took: %s ms\n", methodSignature, time);
-		rec(clazz, arguments[0], String.format("Call to %s intercepted by %s", methodSignature, clazz.getSimpleName()));
+		rec(arguments[0], String.format("Call to %s intercepted by %s", methodSignature, clazz.getSimpleName()));
 
 		getTimes().add(time);
 		return result;

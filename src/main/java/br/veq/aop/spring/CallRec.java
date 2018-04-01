@@ -18,13 +18,13 @@ public class CallRec {
 				.get();
 	}
 
-	protected void rec(Class<?> clazz, Object uid, String msg) {
-		calls.put(clazz.getSimpleName().concat(".").concat(uid.toString()), msg);
+	protected void rec(Object uid, String msg) {
+		calls.put(uid.toString(), msg);
 		System.out.println(msg);
 	}
 
-	public String get(Class<?> clazz, String uid) {
-		return calls.get(clazz.getSimpleName().concat(".").concat(uid));
+	public String get(String uid) {
+		return calls.get(uid);
 	}
 
 }
